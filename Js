@@ -1,0 +1,11 @@
+# Javascript
+
+## 221218
+
+### - Including JS
+
+```sh
+Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+```
+
+JS 파일을 body 맨 위에 넣으니 위 에러가 발생함! 항상 맨 밑에 넣어주는 것으로...!
