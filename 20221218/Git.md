@@ -66,3 +66,16 @@ git clone + "Address"
 ```sh
 git pull origin + "Branch"
 ```
+
+---
+
+## To Initialize A New Repository
+
+```sh
+git init
+git add README.md
+git commit -m + "First Commit"
+git branch -M main
+git remote add origin + "Repository URL"
+git push -u origin main
+```
