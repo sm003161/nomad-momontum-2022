@@ -1,12 +1,14 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 const loginSubmit = loginForm.querySelector("button");
+const link = document.querySelector("a");
 
-function login() {
-    // 자주 쓰는 선택자 변수 만들기 ( 선택 )
-    const inputValue = loginInput.value;
+function login(event) {
+    // 자동 Refresh 막기
+    event.preventDefault();
 
-    // 사용자 이름 변수 만들기
-    let userName = "";
-
+    // input 값 console.log 하기
+    console.log(loginInput.value);
 }
+
+loginForm.addEventListener("submit", login);
