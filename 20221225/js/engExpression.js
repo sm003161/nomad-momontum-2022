@@ -1,16 +1,16 @@
 /* OVERVIEW
-1. quotes array 만들기 ( 내용, 뜻 )
+1. engExpression array 만들기 ( 내용, 뜻 )
 2. Math.random() 로 랜덤 숫자 만들기
 3. Math.floor() 로 소숫점 숫자 떼기
-4. .length() 로 quotes 갯수 가져오기
-5. quotes 에 숫자 붙이기
-3. quotes 호출하기
+4. .length() 로 engExpression 갯수 가져오기
+5. engExpression 에 숫자 붙이기
+3. engExpression 호출하기
 */
 
 const sentences = document.querySelector("span#sentences");
 const meanings = document.querySelector("span#meanings");
 
-const quotes = [
+const engExpression = [
     {
         s: "I just winged it.",
         m: "그건 그냥 즉흥적으로 했어."
@@ -61,7 +61,7 @@ const quotes = [
     }
 ]
 
-const todaysSentence = quotes[Math.floor(Math.random() * quotes.length)];
+const todaysSentence = engExpression[Math.floor(Math.random() * engExpression.length)];
 
 sentences.innerText = todaysSentence.s;
 meanings.innerText = todaysSentence.m;

@@ -46,7 +46,7 @@ A.padstart(최소 글자수, 패딩 문자)
 
 ## 문장 가져오기
 
-###### \* Phrases array 만들기 ( 내용, 뜻 ) → Math.random() 로 랜덤 숫자 만들기 → Math.floor() 로 소숫점 숫자 떼기 → .length() 로 quotes 갯수 가져오기 → quotes 에 숫자 붙이기 → quotes 호출하기
+###### \* engExpression array 만들기 ( 내용, 뜻 ) → Math.random() 로 랜덤 숫자 만들기 → Math.floor() 로 소숫점 숫자 떼기 → .length() 로 engExpression 갯수 가져오기 → engExpression 에 숫자 붙이기 → engExpression 호출하기
 
 ### 1. Math ( o )
 

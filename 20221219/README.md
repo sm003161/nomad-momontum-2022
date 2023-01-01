@@ -1,4 +1,4 @@
-# 20221219 Study Note
+# 20221219
 
 ## login form 만들기 OVERVIEW
 
