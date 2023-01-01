@@ -12,3 +12,7 @@ body {
 .hidden {
     display: none;
 }
+
+#clock {
+    font-size: 40px;
+}
