@@ -3,27 +3,32 @@ const loginInput = loginForm.querySelector("input");
 const welcomeMessage = document.querySelector("#welcomeMessage");
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "user"
 
 // 로그인 이벤트
 function login(event) {
-    // 자동 Refresh 막기
+    // submit 시 Refresh 막기
     event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
 
     // localStorage 에 저장하기
     const userName = loginInput.value;
-    localStorage.setItem( 'user', userName );
-
-    // 완료되면 새로고침
-    window.location.reload();
+    localStorage.setItem(USERNAME_KEY, userName);
+    operateClasses(userName);
 }
 
-loginForm.addEventListener("submit", login);
+// hidden class 변경하기
+function operateClasses(A) {
+    welcomeMessage.classList.remove(HIDDEN_CLASSNAME); 
+    welcomeMessage.innerText = `Hello, ${A}!`;
+}
 
 // localStorage 에 userName 이 있으면 input 숨기고 h1 표시하기
-const savedUserName = localStorage.user;
+const savedUserName = localStorage.getItem(USERNAME_KEY);
 
-if( savedUserName != null ){
-    loginForm.classList.add(HIDDEN_CLASSNAME);
-    welcomeMessage.classList.remove(HIDDEN_CLASSNAME); 
-    welcomeMessage.innerText = `Hello, ${savedUserName}!`;
+if(savedUserName === null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", login);    
+} else {
+    operateClasses(savedUserName);
 }
