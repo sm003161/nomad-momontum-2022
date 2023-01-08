@@ -117,8 +117,8 @@ ELEMENT.createElement("img");
 ### 2. [DOCUMENT].appendChild("A") ( f )
 
 ```js
-// document 안에 img 를 삽입한다.
-document.appendChild("img");
+// ELEMENT 안에 img 를 삽입한다.
+ELEMENT.appendChild("img");
 ```
 
 ### 3. [IMAGE].src = "DIR/IMAGE-SRC.jpg"
@@ -128,3 +128,33 @@ document.appendChild("img");
 const img = document.querySelector("img");
 img.src = "A/B.jpg";
 ```
+
+# 230107
+
+## To-Do 리스트 세팅하기
+
+##### 리스트를 입력할 form & input 만들기 → 리스트 ul 만들기 → submit handler : 리프레쉬 막기, 입력된 값을 변수에 저장, input 비우기
+
+### 1. event.preventDefault() ( f )
+
+```js
+// function 생성 시, event 를 인자로 지정한 상태에서 사용한다.
+function A(event) {
+  event.preventDefault();
+}
+```
+
+### 2. [DOCUMENT].addEventListener("[EVENT]", FUNCTION) ( f )
+
+```js
+// 괄호 안에 submit, scroll, keyup, keydown, mouseover, click, drag, drop 등의 이벤트와 실행할 함수명을 적어 사용한다.
+function A() {
+  console.log("Listen to a click event on");
+}
+
+ELEMENT.addEventListener("click", A);
+```
+
+## To-Do 리스트 표시하기
+
+##### submit 된 toDoItem 를 화면에 가져오는 함수를 만들어 submit 이벤트애 포함시키기 → createElement, innerText, appendChild 사용해 toDoItem 을 li > span 헝태로 생성하기

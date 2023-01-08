@@ -13,11 +13,20 @@
         <input type="text" name="user-name" id="user-name" placeholder="Your Name" required maxlength="15" minlength="3"/>
         <button type="submit">Login</button>
     </form>
-    <h1 id="welcomeMessage" class="hidden"></h1>
+    <h1 id="welcome-message" class="hidden"></h1>
+    <form id="to-do-form" -class="hidden">
+        <input type="text" id="to-do-input" required placeholder="Write here to add">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="to-do-list"></ul>
     <span id="sentences"></span><span id="meanings"></span>
+
+
+    <!-- 스크립트 -->
     <script src="js/login.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/engExpression.js"></script>
     <script src="js/bgimage.js"></script>
+    <script src="js/todolist.js"></script>
 </body>
 </html>
