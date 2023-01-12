@@ -18,7 +18,7 @@ setInterval(everySec, 1000);
 
 ### 2. setTimeout(A, B) ( f )
 
-// 페이지 로딩 이후 정해진 시간에 특정 함수를 실행한다.
+페이지 로딩 이후 정해진 시간에 특정 함수를 실행한다.
 
 ```js
 // 기본 함수 세팅
@@ -32,7 +32,7 @@ setInterval(afterThreeSec, 3000);
 
 ### 3. Date ( m )
 
-// 시간과 관련된 내장 객체로, 다양한 기능이 있다.
+시간과 관련된 내장 객체로, 다양한 기능이 있다.
 
 ```js
 // 시간을 담을 빈 변수를 만들기
@@ -46,7 +46,7 @@ A.getSeconds();
 
 ### 4. String(ELEMENT) ( o )
 
-// 데이터를 string 타입으로 변환한다.
+데이터를 string 타입으로 변환한다.
 
 ```js
 // 변수 만들기
@@ -139,7 +139,7 @@ A.length;
 
 ### 1. [DOCUMENT].createElement("A") ( f )
 
-// ELEMENT 하위에 img 태그를 생성한다.
+ELEMENT 하위에 img 태그를 생성한다.
 
 ```js
 ELEMENT.createElement("img");
@@ -147,7 +147,7 @@ ELEMENT.createElement("img");
 
 ### 2. [DOCUMENT].appendChild("A") ( f )
 
-// ELEMENT 안에 img 를 삽입한다.
+ELEMENT 안에 img 를 삽입한다.
 
 ```js
 ELEMENT.appendChild("img");
@@ -155,7 +155,7 @@ ELEMENT.appendChild("img");
 
 ### 3. [IMAGE].src = "DIR/IMAGE-SRC.jpg"
 
-// 이미지 태그에 src 값을 추가한다.
+이미지 태그에 src 값을 추가한다.
 
 ```js
 // 기본 image 세팅
