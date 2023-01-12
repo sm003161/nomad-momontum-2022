@@ -22,3 +22,11 @@ img {
     width: 100%;
     z-index: -1;
 }
+
+#to-do-list > li > button {
+    background-color: transparent;
+    color: tomato;
+    border: 0;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
