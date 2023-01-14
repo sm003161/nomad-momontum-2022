@@ -197,17 +197,19 @@ function A() {
 ELEMENT.addEventListener("click", A);
 ```
 
+# 2301097
+
 ## To-Do 리스트 표시하기
 
 ##### submit 된 toDoItem 를 화면에 가져오는 함수를 만들어 submit 이벤트애 포함시키기 → createElement, innerText, appendChild 사용해 toDoItem 을 li > span 헝태로 생성하기
 
-## To-Do 리스트 삭제 기능 구현하기
+## To-Do 리스트를 화면에서 삭제하기
 
 ##### item 리스트 옆에 X 버튼 만들기 - addEventListner, event.target.parentEliment, [ ELIMENT ].remove() 사용해 삭제 기능 구현하기
 
 ### 1. event.target.parentEliment() ( f )
 
-#### 이벤트가 발생한 타겟을 기준으로 상위 eliment를 찾는다.
+이벤트가 발생한 타겟을 기준으로 상위 eliment를 찾는다.
 
 ```js
 // 기본 DOM 세팅
@@ -227,7 +229,7 @@ btn.addEventListener("click", A);
 
 ### 2. [ ELEMENT ].remove() ( f )
 
-#### ELEMENT 를 삭제한다.
+ELEMENT 를 삭제한다.
 
 ```js
 // 기본 DOM 세팅
@@ -235,4 +237,50 @@ const div = document.createElement("div");
 
 // 삭제
 div.remove();
+```
+
+# 230114
+
+## To-Do 리스트를 Local Storage 에 저장하기
+
+##### array 만들고 item 생성 시 array 에 push 하기 → JSON.stringify 이용해 localStorage.setItem 이용해 localStorage 에 저장하기
+
+### 1. [ ARRAY ].push() ( m )
+
+Array 에 값을 추가한다.
+
+```js
+// 기본 array 세팅
+const A = [];
+
+// array 에 값 추가하기
+A.push("a");
+```
+
+### 2. localStorage
+
+Local Storage 를 이용한다.
+
+```js
+// 기본 세팅
+const USER = "Kijai";
+
+// 값 저장하기
+localStorage.setItem("user", USER);
+
+// 값 불러오기
+localStorage.getItem("user");
+
+// 값 제거하기
+localStorage.removeItem("user");
+```
+
+### 3. JSON.stringify()
+
+```js
+// 변수 만들기
+const A = 5;
+
+// 변수를 객체로 감싸기
+JSON.stringify(A);
 ```

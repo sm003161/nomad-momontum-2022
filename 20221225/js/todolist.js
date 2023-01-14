@@ -2,8 +2,9 @@ const toDoForm = document.querySelector("form#to-do-form");
 const toDoInput = toDoForm.querySelector("input#to-do-input");
 const toDoList = document.querySelector("ul#to-do-list");
 let toDoItem = "";
+const toDoArray = [];
 
-// 제거 기능 구현하기
+// 화면에서 toDoItem 제거하기
 function delAnItem(event) {
     const targetBtn = event.target.parentElement;
     const targetLi = targetBtn.parentElement;
@@ -30,6 +31,11 @@ function showAnItem(toDoItem) {
     span.innerText = toDoItem;
 }
 
+// Local Storage 에 저장하기
+function saveAnItem() {
+    localStorage.setItem("toDoItem", JSON.stringify(toDoArray));
+}
+
 // Submit 이벤트
 function toDoSubmit(event) {
     // submit 시 Refresh 막기
@@ -42,6 +48,8 @@ function toDoSubmit(event) {
     toDoInput.value = "";
 
     showAnItem(toDoItem);
+    toDoArray.push(toDoItem);
+    saveAnItem(toDoItem);
 }
 
 toDoForm.addEventListener("submit", toDoSubmit);
