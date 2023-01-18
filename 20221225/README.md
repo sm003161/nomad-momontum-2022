@@ -247,7 +247,7 @@ div.remove();
 
 ### 1. [ ARRAY ].push() ( m )
 
-Array 에 값을 추가한다.
+array 에 값을 추가한다.
 
 ```js
 // 기본 array 세팅
@@ -277,10 +277,49 @@ localStorage.removeItem("user");
 
 ### 3. JSON.stringify()
 
-```js
-// 변수 만들기
-const A = 5;
+array 를 문자화해 Local Storage 에 저장할 수 있게 한다.
 
-// 변수를 객체로 감싸기
+```js
+// array 세팅
+const A = [1, 2];
+
+// array 를 문자화하기
 JSON.stringify(A);
 ```
+
+# 230115
+
+## 저장된 To-Do 리스트 불러오기
+
+##### localStorage 를 사용해 todos array 를 호출하기 → 값이 있을 시 JSON.parse, forEach 를 이용해 각각의 값을 화면에 표시하기
+
+### 1. JSON.parse()
+
+문자화한 array 를 복구하기
+
+```js
+// array 세팅
+const A = [1, 2];
+
+// array 를 문자화하기
+JSON.stringify(A);
+
+// 문자화된 array 를 복구하기
+JSON.parse(A);
+```
+
+### 2. [ ARRAY ].forEach()
+
+````js
+// array 세팅
+const A = [1, 2];
+
+// function 세팅
+function consoleLog() {
+  console.log();
+}
+
+// forEach 실행
+A.forEach(consoleLog);
+;```
+````
