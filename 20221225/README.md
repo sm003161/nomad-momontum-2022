@@ -310,7 +310,9 @@ JSON.parse(A);
 
 ### 2. [ ARRAY ].forEach()
 
-````js
+array 내 각 항목에 함수 실행하기
+
+```js
 // array 세팅
 const A = [1, 2];
 
@@ -321,5 +323,4 @@ function consoleLog() {
 
 // forEach 실행
 A.forEach(consoleLog);
-;```
-````
+```
